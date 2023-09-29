@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BMS_Test.Define;
+using BMS_Test.MVVM.Views;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO.Ports;
 using System.Linq;
@@ -12,7 +15,7 @@ using System.Windows.Threading;
 
 namespace BMS_Test.MVVM.ViewModels
 {
-    public class VMMain
+    public class VMMain : PropertyChangedNotifier
     {
         SerialPort PortPin;
         byte[] DataReceive;
@@ -24,6 +27,9 @@ namespace BMS_Test.MVVM.ViewModels
         byte[] Function51_BMSVersion;
         byte[] Function220_SerialNumber_Receive;
         byte[] Function220_SerialNumber;
+        short[] DEC_Function01_DataBattery_Receive;
+        
+        //public BMS_Board _BMS_Board = new BMS_Board();
         public VMMain()
         {
             Function01_DataBattery = new byte[] {0x7E, 0x01, 0x01, 0x00, 0xFE, 0x0D};
@@ -35,7 +41,10 @@ namespace BMS_Test.MVVM.ViewModels
             Function51_BMSVersion_Receive = new byte[255];
             Function220_SerialNumber_Receive = new byte[255];
             DataReceive = new byte[255];
+            DEC_Function01_DataBattery_Receive = new short[255];
+
             InitializeSerialPort();
+            InitializeTimer();
             Thread thread = new Thread(Process);
             thread.Start();
         }
@@ -53,9 +62,40 @@ namespace BMS_Test.MVVM.ViewModels
             }
             catch (Exception ex)
             {
-            //    // Xử lý lỗi nếu có
+                //    // Xử lý lỗi nếu có
                 MessageBox.Show("Lỗi khi mở cổng serial: " + ex.Message);
             }
+        }
+        private void InitializeTimer()
+        {
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromMilliseconds(100);
+            timer.Tick += (s, e) =>
+            {
+                OnPropertyChanged("Capacity");
+                OnPropertyChanged("Total Volt");
+                OnPropertyChanged("Current");
+                OnPropertyChanged("Max Temp");
+                OnPropertyChanged("Min Temp");
+                OnPropertyChanged("Voltage_1");
+                OnPropertyChanged("Voltage_2");
+                OnPropertyChanged("Voltage_3");
+                OnPropertyChanged("Voltage_4");
+                OnPropertyChanged("Voltage_5");
+                OnPropertyChanged("Voltage_6");
+                OnPropertyChanged("Voltage_7");
+                OnPropertyChanged("Voltage_8");
+                OnPropertyChanged("Voltage_9");
+                OnPropertyChanged("Voltage_10");
+                OnPropertyChanged("Voltage_11");
+                OnPropertyChanged("Voltage_12");
+                OnPropertyChanged("Voltage_13");
+                OnPropertyChanged("Voltage_14");
+                OnPropertyChanged("Voltage_15");
+                OnPropertyChanged("Voltage_16");
+
+            };
+            timer.Start();
         }
         private void Process()
         {
@@ -106,6 +146,19 @@ namespace BMS_Test.MVVM.ViewModels
             if (DataReceive[2] == 0x01)
             {
                 Function01_DataBattery_Receive = DataReceive;
+                for(int i=0; i< Function01_DataBattery_Receive.Length -1;i++)
+                {
+                    byte temp = Function01_DataBattery_Receive[i];
+                    Function01_DataBattery_Receive[i] = Function01_DataBattery_Receive[i + 1];
+                    Function01_DataBattery_Receive[i+1] = temp;
+                    i++;
+                }
+                for (int n = 0; n< 50; n++)
+                {
+                    DEC_Function01_DataBattery_Receive[n] = BitConverter.ToInt16(Function01_DataBattery_Receive, 2*n+6);
+
+                }
+
             }
             if (DataReceive[2] == 0x43)
             {
@@ -135,6 +188,103 @@ namespace BMS_Test.MVVM.ViewModels
                 MessageBox.Show("Lỗi khi đọc dữ liệu từ cổng serial: " + ex.Message);
             }
         }
-        
+        public string Voltage_1
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[0]/1000.0).ToString("0.000"); }
+        }
+        public string Voltage_2
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[1] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_3
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[2] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_4
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[3] / 1000.0).ToString("0.000"); }
+
+        }
+        public string Voltage_5
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[4] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_6
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[5] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_7
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[6] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_8
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[7] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_9
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[8] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_10
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[9] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_11
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[10] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_12
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[11] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_13
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[12] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_14
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[13] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_15
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[14] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage_16
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Current
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Remaining_Capacity
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Temperatures
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Alarm_bits
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Cycles
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string Voltage
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string State_of_Health
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+        public string ALM_bytes
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+        }
+
     }
 }
