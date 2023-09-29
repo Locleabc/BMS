@@ -1,0 +1,86 @@
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\BMS_Test.exe.config
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\BMS_Test.exe
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\BMS_Test.pdb
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\MaterialDesignColors.dll
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\MaterialDesignColors.pdb
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.csproj.AssemblyReference.cache
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\MainWindow.g.cs
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\App.g.cs
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.cache
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.lref
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\App.baml
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\MainWindow.baml
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.g.resources
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.Properties.Resources.resources
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.csproj.GenerateResource.cache
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.csproj.CoreCompileInputs.cache
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.csproj.CopyComplete
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.exe
+C:\Users\LOC\Desktop\BMS_Test\BMS_Test\obj\Debug\BMS_Test.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.exe.config
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.exe
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignColors.dll
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignColors.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.AssemblyReference.cache
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VLoginWindow.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\App.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.cache
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.lref
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\App.baml
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VLoginWindow.baml
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.g.resources
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.Properties.Resources.resources
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.GenerateResource.cache
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CoreCompileInputs.cache
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CopyComplete
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.exe
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.pdb
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBar.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBar.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.AssemblyReference.cache
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.SuggestedBindingRedirects.cache
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VLoginWindow.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBar.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\App.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.cache
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test_MarkupCompile.lref
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.exe
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.pdb
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBatteryVolt.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VMain.g.cs
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.exe.config
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.exe
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\BMS_Test.pdb
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignColors.dll
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.dll
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignColors.pdb
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.pdb
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\bin\Debug\Microsoft.Xaml.Behaviors.xml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\App.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VLoginWindow.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VMain.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBar.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBatteryVolt.baml
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.g.resources
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.Properties.Resources.resources
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.GenerateResource.cache
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CoreCompileInputs.cache
+C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CopyComplete
