@@ -84,3 +84,7 @@ C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.Proper
 C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.GenerateResource.cache
 C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CoreCompileInputs.cache
 C:\Users\locle\OneDrive\Máy tính\BMS_SW\BMS\BMS_Test\obj\Debug\BMS_Test.csproj.CopyComplete
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VMain.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBatteryVolt.g.cs
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\MVVM\Views\VMain.baml
+C:\Users\LOC\Desktop\BMS_SW\BMS\BMS_Test\obj\Debug\UC\UCBatteryVolt.baml

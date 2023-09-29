@@ -51,7 +51,7 @@ namespace BMS_Test.MVVM.ViewModels
         private void InitializeSerialPort()
         {
             PortPin = new SerialPort();
-            PortPin.PortName = "COM16";
+            PortPin.PortName = "COM11";
             PortPin.BaudRate = 9600;
             PortPin.Parity = Parity.None;
             PortPin.StopBits = StopBits.One;
@@ -99,27 +99,22 @@ namespace BMS_Test.MVVM.ViewModels
         }
         private void Process()
         {
-            SendData(Function51_BMSVersion, DataReceive);
-            Thread.Sleep(1000);
-            SendData(Function220_SerialNumber, DataReceive);
-            Thread.Sleep(1000);
+            //SendData(Function51_BMSVersion, DataReceive);
+            //Thread.Sleep(1000);
+            //SendData(Function220_SerialNumber, DataReceive);
+            //Thread.Sleep(1000);
 
             while (true)
             {
                 SendData(Function01_DataBattery, DataReceive);
-                Thread.Sleep(1000);
-                SendData(Function67_Protection, DataReceive);
-                Thread.Sleep(1000);
+                Thread.Sleep(100);
+                //SendData(Function67_Protection, DataReceive);
+                //Thread.Sleep(1000);
             }
         }
         private void SendData(byte[] Data_Send, byte[] Data_Receive)
         {
-            for (int n = 0; n < 255; n++)
-            {
-                Data_Receive[n] = 0;
-            }
-            for (int i = 0; i < Data_Send.Length; i++)
-            {
+            
                 if (PortPin.IsOpen)
                 {
                     PortPin.Write(Data_Send, 0, Data_Send.Length);
@@ -128,7 +123,6 @@ namespace BMS_Test.MVVM.ViewModels
                 {
                     MessageBox.Show("Port Close!");
                 }
-            }
         }
         private async void Receive_Data()
         {
@@ -143,23 +137,34 @@ namespace BMS_Test.MVVM.ViewModels
         }
         private void ExcuteData()
         {
-            if (DataReceive[2] == 0x01)
+            short a = 0;
+            if (DataReceive[0] == 0x7E)
             {
-                Function01_DataBattery_Receive = DataReceive;
-                for(int i=0; i< Function01_DataBattery_Receive.Length -1;i++)
+                if (DataReceive[1] == 0x01)
                 {
-                    byte temp = Function01_DataBattery_Receive[i];
-                    Function01_DataBattery_Receive[i] = Function01_DataBattery_Receive[i + 1];
-                    Function01_DataBattery_Receive[i+1] = temp;
-                    i++;
-                }
-                for (int n = 0; n< 50; n++)
-                {
-                    DEC_Function01_DataBattery_Receive[n] = BitConverter.ToInt16(Function01_DataBattery_Receive, 2*n+6);
+                    if (DataReceive[2] == 0x01)
+                    {
+                        Function01_DataBattery_Receive = DataReceive;
+                        for (int i = 0; i < Function01_DataBattery_Receive.Length - 1; i++)
+                        {
+                            byte temp = Function01_DataBattery_Receive[i];
+                            Function01_DataBattery_Receive[i] = Function01_DataBattery_Receive[i + 1];
+                            Function01_DataBattery_Receive[i + 1] = temp;
+                            i++;
+                        }
+                        for (int n = 0; n < 124; n++)
+                        {
+                            a = BitConverter.ToInt16(Function01_DataBattery_Receive, 2 * n + 6);
+                            if (a > 0)
+                                DEC_Function01_DataBattery_Receive[n] = a;
 
-                }
+                        }
 
-            }
+                    }
+                }    
+                    
+            }    
+                
             if (DataReceive[2] == 0x43)
             {
                 Function67_Protection_Receive = DataReceive;
@@ -181,7 +186,9 @@ namespace BMS_Test.MVVM.ViewModels
         {
             try
             {
-                Receive_Data();
+                PortPin.Read(DataReceive, 0, 255);
+                ExcuteData();
+                //Receive_Data();
             }
             catch (Exception ex)
             {
@@ -190,68 +197,68 @@ namespace BMS_Test.MVVM.ViewModels
         }
         public string Voltage_1
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[0]/1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[0] - 16384)/1000.0).ToString("0.000"); }
         }
         public string Voltage_2
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[1] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[1] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_3
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[2] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[2] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_4
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[3] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[3] - 16384) / 1000.0).ToString("0.000"); }
 
         }
         public string Voltage_5
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[4] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[4] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_6
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[5] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[5] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_7
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[6] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[6] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_8
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[7] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[7] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_9
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[8] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[8] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_10
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[9] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[9] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_11
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[10] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[10] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_12
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[11] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[11] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_13
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[12] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[12] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_14
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[13] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[13] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_15
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[14] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[14] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Voltage_16
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[15] - 16384) / 1000.0).ToString("0.000"); }
         }
         public string Current
         {
