@@ -6,67 +6,210 @@
         xmlns:local="clr-namespace:BMS_Test.MVVM.Views"
         mc:Ignorable="d"
         xmlns:vm="clr-namespace:BMS_Test.MVVM.ViewModels"
-        WindowStyle="None"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
         Title="VMain" Height="450" Width="800">
-    <Window.DataContext>
-        <vm:VMMain/>
-    </Window.DataContext>
     <Grid>
         <UniformGrid Columns="4"
                      Rows="9">
-            <TextBlock Text="{Binding Voltage_1}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_2}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_3}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_4}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_5}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_6}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_7}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_8}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_9}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_10}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_11}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_12}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_13}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_14}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_15}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_16}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            <TextBlock Text="{Binding Voltage_16}"
-                       VerticalAlignment="Center"
-                       HorizontalAlignment="Center"/>
-            
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_1, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 1
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_2, Mode=OneTime}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 2
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_3, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 3
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_4, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 4
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_5, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 5
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_6, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 6
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_7, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 7
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_8, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 8
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_9, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 9
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_10, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 10
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_11, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 11
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_12, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 12
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_13, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 13
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_14, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 14
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_15, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 15
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Voltage_16, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Cell 16
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
         </UniformGrid>
-
     </Grid>
 </Window>

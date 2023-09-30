@@ -21,12 +21,19 @@ namespace BMS_Test.MVVM.Views
     
     public partial class VMain : Window
     {
-        //private readonly VMMain vmMain;
+        private VMMain vmMain;
         public VMain()
         {
             InitializeComponent();
+            vmMain= new VMMain();
+            this.DataContext= vmMain;
+            this.Closed += Window_Closed;
             //vmMain = new VMMain();
             //DataContext = vmMain;
+        }
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            vmMain.WindowClosed();
         }
     }
 }
