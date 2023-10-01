@@ -51,7 +51,7 @@ namespace BMS_Test.MVVM.ViewModels
         private void InitializeSerialPort()
         {
             PortPin = new SerialPort();
-            PortPin.PortName = "COM15";
+            PortPin.PortName = "COM11";
             PortPin.BaudRate = 9600;
             PortPin.Parity = Parity.None;
             PortPin.StopBits = StopBits.One;
@@ -108,7 +108,7 @@ namespace BMS_Test.MVVM.ViewModels
             while (true)
             {
                 SendData(Function01_DataBattery);
-                Thread.Sleep(100);
+                Thread.Sleep(1000);
                 //SendData(Function67_Protection);
                 //Thread.Sleep(1000);
             }
@@ -192,7 +192,7 @@ namespace BMS_Test.MVVM.ViewModels
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi khi đọc dữ liệu từ cổng serial: " + ex.Message);
+                //MessageBox.Show("Lỗi khi đọc dữ liệu từ cổng serial: " + ex.Message);
             }
         }
         public string Voltage_1
@@ -262,16 +262,37 @@ namespace BMS_Test.MVVM.ViewModels
         }
         public string Current
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+            get { return ((double)(DEC_Function01_DataBattery_Receive[17]-30000) / 100000.0).ToString("0.000"); }
         }
-        public string Remaining_Capacity
+        public string RemainingCapacity
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+            get { return ((double)DEC_Function01_DataBattery_Receive[19] / 100.0).ToString("0.00"); }
         }
-        public string Temperatures
+        public string Temperatures1
         {
-            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }
+            get { return ((double)DEC_Function01_DataBattery_Receive[23] - 70.0).ToString("0.0"); }
         }
+        public string Temperatures2
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[24] - 70.0).ToString("0.0"); }
+        }
+        public string Temperatures3
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[25] - 70.0).ToString("0.0"); }
+        }
+        public string Temperatures4
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[26] - 70.0).ToString("0.0"); }
+        }
+        public string Temperatures5
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[27] / - 70.0).ToString("0.0"); }
+        }
+        public string Temperatures6
+        {
+            get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.00"); }
+        }
+
         public string Alarm_bits
         {
             get { return ((double)DEC_Function01_DataBattery_Receive[15] / 1000.0).ToString("0.000"); }

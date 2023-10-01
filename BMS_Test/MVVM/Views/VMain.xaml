@@ -31,7 +31,7 @@
                 </materialDesign:HintAssist.Hint>
             </TextBox>
             <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                        Text="{Binding Voltage_2, Mode=OneTime}">
+                        Text="{Binding Voltage_2, Mode=OneWay}">
                 <materialDesign:HintAssist.Hint>
                     <StackPanel Orientation="Horizontal"
                                 Margin="8 0 0 0">
@@ -206,6 +206,90 @@
                         <materialDesign:PackIcon Kind="BatteryCharging" />
                         <TextBlock>
                             Cell 16
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Current, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Current
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding RemainingCapacity, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Remaining_Capacity
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Temperatures1, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Temperatures1
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Temperatures2, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Temperatures2
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Temperatures3, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Temperatures3
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Temperatures4, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Temperatures4
+                        </TextBlock>
+                    </StackPanel>
+                </materialDesign:HintAssist.Hint>
+            </TextBox>
+            <TextBox    Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Temperatures5, Mode=OneWay}">
+                <materialDesign:HintAssist.Hint>
+                    <StackPanel Orientation="Horizontal"
+                                Margin="8 0 0 0">
+                        <materialDesign:PackIcon Kind="BatteryCharging" />
+                        <TextBlock>
+                            Temperatures5
                         </TextBlock>
                     </StackPanel>
                 </materialDesign:HintAssist.Hint>
